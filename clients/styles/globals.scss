@@ -2,20 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-$bg_dark: #242424;
-$bg_light: rgba(255, 255, 255, 0.87);
+$dark: #242424;
+$light: rgba(255, 255, 255, 0.87);
 
 
 body{
-    background-color: $bg_light;
+    background-color: $light;
 }
 
 body.dark{
-    background-color:$bg_dark;
+    background-color:$dark;
     color: white;
 
     .switch{
-        background-color: $bg_light;
+        background-color: $light;
     }
+
+    
 }
 
