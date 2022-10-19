@@ -2,6 +2,7 @@ import '../styles/globals.scss'
 import '../styles/home.css'
 import '../styles/footer.scss'
 import '../styles/navbar.scss'
+import '../styles/home.scss'
 
 
 function MyApp({ Component, pageProps }) {
