@@ -9,10 +9,23 @@ nav{
   font-size: 20px;
   z-index: 9999;
   
+.logo{
+  img{
+    width: 14%;
+    margin-top: -20px;
+  }
+  display: flex;
+}
+
   div{
       
       span{
           margin: 12px;
+
+          &:hover{
+            color: rgb(247, 23, 247);
+            cursor: pointer;
+          }
       }
   }
 }
