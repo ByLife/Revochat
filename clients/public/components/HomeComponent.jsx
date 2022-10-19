@@ -3,11 +3,8 @@ import React from 'react';
 
 const HomeComponent = ({test, voiture}) => {
     return (
-        <div className='test'>
-            <h1>HELLOO</h1>
-            {test}
-
-            <p>{voiture}</p>
+        <div>
+            
         </div>
         
     );
