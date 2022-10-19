@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    background-color:#242424;
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 40px;
+    font-size: 20px;
+    
+    div{
+        color: rgba(255, 255, 255, 0.87);
+        
+        span{
+            margin: 12px;
+        }
+    }
+}
