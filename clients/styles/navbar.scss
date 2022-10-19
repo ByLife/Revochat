@@ -1,3 +1,5 @@
+@import './globals.scss';
+
 nav{
   display: flex;
   align-items: center;
@@ -17,17 +19,16 @@ nav{
   position: relative;
   width: 40px;
   height: 22px;
-  display: block;
+  display: inline-block;
   flex-shrink: 0;
   border-radius: 11px;
   // margin-right: 40px;
   margin: auto;
   border: 1px solid black;
-  background-color: black;
+  background-color: $bg_dark;
   padding: 0;
   transition: border-color .25s,background-color .25s;
-  
-  
+   
   
 }
 
@@ -46,7 +47,7 @@ nav{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: black;
+  // background-color: $bg_dark;
   transition: 0.4s;
   border-radius: 30px;
 }
