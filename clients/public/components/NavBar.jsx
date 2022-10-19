@@ -14,6 +14,11 @@ const NavBar = () => {
                 <span>Guide</span>
                 <span>Version</span>
                 <span>Nous contacter</span>
+                <label className='switch'>
+                    <input type="checkbox" onClick={toggleDarkMode}/>
+                <span className="slider"></span>
+            </label>
+                
             </div>
         </nav>
     );
