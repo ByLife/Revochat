@@ -1,11 +1,8 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 const NavBar = () => {
-    // const body = useRef(null);
-
-    // const inoput = document.querySelector('input');
-    // const body = document.querySelector('body');
+    
     const [body, setBody] = useState();
 
     useEffect(() => {
@@ -22,7 +19,7 @@ const NavBar = () => {
         <nav>
             <div>
                 <span>Logo Revochat</span>
-                <input type="text" placeholder='Search' />
+                <input className='search' type="text" placeholder='Search' />
             </div>
             <div>
                 <label className='switch'>

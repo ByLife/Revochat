@@ -4,12 +4,22 @@
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
+$dark: #242424;
+$light: rgba(255, 255, 255, 0.87);
+
+
 body{
-    background-color: rgba(255, 255, 255, 0.87)
+    background-color: $light;
 }
 
 body.dark{
-    background-color:#242424;
+    background-color:$dark;
     color: white;
+
+    .switch{
+        background-color: $light;
+    }
+
+    
 }
 
