@@ -18,8 +18,11 @@ const NavBar = () => {
     return (
         <nav>
             <div>
-                <span>Logo Revochat</span>
-                <input className='search' type="text" placeholder='Search' />
+                <div className='logo'>
+                    <img src="../assets/img/logo.jpg" alt="" />
+                     Revochat
+                </div>
+                {/* <input className='search' type="text" placeholder='Search' /> */}
             </div>
             <div>
                 <label className='switch'>
@@ -28,7 +31,7 @@ const NavBar = () => {
                 </label>
                 <span>Guide</span>
                 <span>Version</span>
-                <span>Nous contacter</span>
+                <span>FAQ</span>
                 
                 
             </div>
