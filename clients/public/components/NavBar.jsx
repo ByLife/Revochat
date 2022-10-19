@@ -1,11 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
 
 const NavBar = () => {
-    
+    // const body = useRef(null);
 
     // const inoput = document.querySelector('input');
-    const body = document.querySelector('body');
+    // const body = document.querySelector('body');
+    const [body, setBody] = useState();
+
+    useEffect(() => {
+        setBody(document.querySelector('body'));
+    }, []);
 
     const toggleDarkMode = () => {
         body.classList.toggle("dark");
