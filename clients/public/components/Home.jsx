@@ -4,7 +4,7 @@ export default function home() {
   return (
     <div className='mainPage'>
     <article>
-        <h1> Revochat - A revolusionary Chat App </h1>
+        <h1> <span className='titleApp'>Revochat</span> - A revolusionary Chat App </h1>
         <p> Based on WEB3 | first chat app using decentralized data </p>
         <button type="submit"> Sign in </button>
 

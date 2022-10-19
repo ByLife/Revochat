@@ -1,4 +1,6 @@
 @import './globals.scss';
+
+
 .mainPage {
     margin-top: -80px;
     display: grid;
@@ -31,6 +33,21 @@
             cursor: pointer;
             
         }
+
+        .titleApp{
+
+            font-weight: 600;
+            font-size: 46px;
+            background-image: linear-gradient( 120deg, #bd34fe 30%, #41d1ff );
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+          
+            
+            
+        }
     }
     main {
 
@@ -38,6 +55,8 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            // background: linear-gradient( 120deg, #bd34fe 30%, #41d1ff );
+            
         }
     }
 }
