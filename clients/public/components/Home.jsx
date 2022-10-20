@@ -17,6 +17,7 @@ export default function home() {
         <h1> <span className='titleApp'>Revochat</span> - A revolusionary Chat App </h1>
         <p> Based on WEB3 | first chat app using decentralized data </p>
        <button type="button" onClick={WalletLogin}> Connect to Wallet </button>
+       
 
     </article>
     <main>

@@ -7,8 +7,8 @@ import NavBar from '../public/components/NavBar';
 const AppPage = () => {
     return (
         <>
-        <NavBar/>
-            {/* <SideBar/> */}
+        {/* <NavBar/> */}
+            <SideBar/>
            <ChatPage/>
         </>
     );
