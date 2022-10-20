@@ -2,6 +2,7 @@ import '../styles/globals.scss'
 import '../styles/footer.scss'
 import '../styles/navbar.scss'
 import '../styles/home.scss'
+import '../styles/sidebar.scss'
 import React from 'react';
 
 export const Context = React.createContext();
