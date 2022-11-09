@@ -15,7 +15,7 @@ export default function home() {
     
   }
   return (
-    <div className={'mainPage m-auto mt-40'}>
+    <div className={'mainPage mt-40 flex justify-evenly'}>
     <article>
         <h1> <span className='titleApp '>Revochat</span> - A revolusionary Chat App </h1>
         <p> Based on WEB3 | first chat app using decentralized data </p>
@@ -24,9 +24,8 @@ export default function home() {
        
 
     </article>
-    <div className='mt-10'>
-        <img src={logo.src} alt="logo" />
-    </div>
+   
+        <img className='bg-cover' src={logo.src} alt="logo" width='500px'/>
     
     </div>
 

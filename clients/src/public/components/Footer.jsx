@@ -2,9 +2,8 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div className='divfooter'>
-            <div></div>
-            <footer>
+        <div >
+            <footer className='flex justify-evenly text-xl mt-8 relative bottom-0 bg-slate-400 h-28 items-center'>
                 <p> All rights reserved 2022 &copy; </p>
                 <ul>
                     <li><a href="#"> Terms & conditions </a></li>
@@ -19,7 +18,7 @@ const Footer = () => {
                     <li><a href="#"> Developpers </a></li>
                 </ul>
             </footer>
-            <div></div>
+            
         </div>
     );
 }

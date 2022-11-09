@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import logo from '../assets/img/logo.png'
+import IconButton from '@mui/material/IconButton';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+
 
 const NavBar = () => {
     
     const [body, setBody] = useState();
+    const [darkMode, setDarkMode] = useState()
 
     useEffect(() => {
         setBody(document.querySelector('body'));
@@ -12,6 +17,7 @@ const NavBar = () => {
 
     const toggleDarkMode = () => {
         body.classList.toggle("dark");
+        setDarkMode(!darkMode)
      
     }
 
@@ -28,19 +34,11 @@ const NavBar = () => {
                 {/* <input className='search' type="text" placeholder='Search' /> */}
             </div>
             <div>
-                <label className='switch'>
-                    <input type="checkbox" onClick={toggleDarkMode}/>
-                    <span className="slider"></span>
-                </label>
-                {/* <Link>
-                    <span>Guide</span>
-                </Link>
-                <Link>
-                    <span>Version</span>
-                </Link>
-                <Link>
-                    <span>FAQ</span>
-                </Link> */}
+
+            <IconButton size='small' sx={{ ml: 1 }} onClick={toggleDarkMode} color="inherit">
+                {darkMode? <Brightness7Icon /> : <Brightness4Icon />}
+            </IconButton>
+                
 
                 <span>Guide</span>
                 <span>Version</span>
