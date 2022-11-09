@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import logo from '../assets/img/logo.png'
 
 const NavBar = () => {
     
@@ -20,7 +21,7 @@ const NavBar = () => {
             <div>
                 <Link href='/'>
                 <div className='logo'>
-                    <img src="../assets/img/logo.png" alt="" />
+                    <img src={logo.src} alt="" />
                      Revochat
                 </div>
                 </Link>
