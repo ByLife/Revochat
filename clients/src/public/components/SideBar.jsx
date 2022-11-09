@@ -21,7 +21,7 @@ const SideBar = () => {
         setAuth(false);
     }
     return (
-        <div class="sidebar">
+        <div className="sidebar">
             <label className='switch'>
                     <input type="checkbox" onClick={toggleDarkMode}/>
                     <span className="slider"></span>
