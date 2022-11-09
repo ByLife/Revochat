@@ -2,7 +2,7 @@ import React from 'react';
 
 const ChatPage = () => {
     return (
-        <div style={{left: '50%', top: '300px', position: 'relative'}}>
+        <div className='overflow-hidden m-auto w-40 mt-10'>
            <h1>Chat Page</h1> 
         </div>
     );
