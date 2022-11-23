@@ -4,14 +4,14 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Divider from '@mui/material/Divider';
 
 
-export default function FriendsListRow({users}) {
+export default function FriendsListRow({users, search}) {
+
   return (
     <div className='mt-4 ml-4'>
             
             <div>
             {users.map((user, index)=> (
                 <>
-                
                 <div className='w-full my-2 flex'>
                    <span 
                    style={{
@@ -34,10 +34,6 @@ export default function FriendsListRow({users}) {
                     </div>
                 </div>
                 <Divider/>
-                
-                
-                 
-                 
                 </>
             ))}
             </div>

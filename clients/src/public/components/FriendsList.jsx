@@ -75,6 +75,16 @@ export default function FriendsList() {
 
     }, [nav]);
 
+    const searchUser = (e) => {
+      setSearch(e.target.value)
+      const results = users.filter(user => {
+        if (search == "") return users
+        return user.name.toLowerCase().includes(search.toLowerCase())
+      })
+      // setUsers(results)
+      // console.log(users)
+  }
+
   return (
     <div className='mt-4 bottom-0 h-full ml-2'>
         <header className='flex justify-self-start text-xl font-semibold cursor-pointer'>
@@ -90,14 +100,14 @@ export default function FriendsList() {
         <div className='mt-4 mx-4'>
 
 
-        <Search>
+        <Search className='mb-2'>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
               
               onChange={(e) => {
-                setSearch(e.target.value);
+                searchUser(e);
               }}
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
@@ -110,7 +120,7 @@ export default function FriendsList() {
            
             
             <Divider className='mt-2' />
-       <FriendsListRow users={users} />
+       <FriendsListRow users={users} search={search}/>
         
     </div>
   )
