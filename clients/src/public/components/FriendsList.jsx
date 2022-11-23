@@ -7,6 +7,7 @@ import {USERS} from '../data/Users'
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Diversity1Icon from '@mui/icons-material/Diversity1';
+import FriendsListRow from './FriendsListRow';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -59,7 +60,19 @@ export default function FriendsList() {
 
 
     useEffect(() => {
-        
+        switch (nav) {
+          case 'Online':
+            return setUsers(USERS.filter(x => x.status == "online"))
+          case 'Offline':
+            return setUsers(USERS.filter(x => x.status == "offline"))
+          case 'Pending':
+            return setUsers(USERS.filter(x => x.status == "pending"))
+          case 'Blocked':
+            return setUsers(USERS.filter(x => x.status == "blocked"))
+          default:
+            return setUsers(USERS)
+        }
+
     }, [nav]);
 
   return (
@@ -93,53 +106,11 @@ export default function FriendsList() {
           {search}
         </div>
 
-        <div className='mt-4 ml-4'>
-            {nav} -
-            {nav == 'Online'? 
-            <>
-            {users.filter(x => x.status == 'online').length}
-            </>
-
-            :
-            <>
-            </>
-            }
+        {nav} - {users.length}
+           
+            
             <Divider className='mt-2' />
-            <div>
-            {users.map((user, index)=> (
-                <>
-                {nav == 'All'?
-                <>
-                <div className='w-full my-2 flex'>
-                   <span 
-                   style={{
-                    width: '10px', 
-                    height: '10px', 
-                    backgroundColor: user.status == 'online'? 'green' : 'red', 
-                    position: 'absolute',
-                    borderRadius: '50%',
-                    marginLeft: '4px'
-                    }} >
-                    </span> 
-                    <img style={{width: '50px', height: '50px', borderRadius: '50%', border: 'black 1px'}} src={user.image} alt="" />
-                    <div className='ml-2'>
-                        <span className='font-semibold text-xl'>{user.name} </span> <br/>
-                        <span className='italic'>{user.status} </span>
-                    </div>
-                    <div className='right-0 mt-3 mx-20 absolute align-middle items-center '>
-                        <span className='mx-2'> <ChatBubbleIcon fontSize='large' /></span>
-                        <span className='mx-2'> <MoreVertIcon fontSize='large' /> </span>
-                    </div>
-                </div>
-                <Divider/>
-                </>
-                
-                 : <>
-                 </>       }
-                </>
-            ))}
-            </div>
-        </div>
+       <FriendsListRow users={users} />
         
     </div>
   )
