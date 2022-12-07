@@ -6,6 +6,7 @@ import { Context } from '../../pages/Context';
 const MetaConnect = () => {
 
   const [Auth, setAuth] = useContext(Context);
+  const [wallet, setWallet] = useContext(Context);
 
   const [errorMessage, setErrorMessage] = useState(null);
   const [account, setAccount] = useState(null);
@@ -24,7 +25,7 @@ const MetaConnect = () => {
         const res = await window.ethereum.request({
           method: "eth_requestAccounts",
         });
-        await accountChange(res[0]);
+        await accountsChanged(res[0]);
       } catch (err) {
         console.error(err);
         setErrorMessage("There was a problem connecting to MetaMask");
@@ -32,7 +33,6 @@ const MetaConnect = () => {
     } else {
       setErrorMessage("Install MetaMask");
     }
-    setAuth(true);
   };
 
   const accountsChanged = async (newAccount) => {
@@ -47,12 +47,15 @@ const MetaConnect = () => {
       console.error(err);
       setErrorMessage("There was a problem connecting to MetaMask");
     }
+    setWallet(account)
+    console.log(wallet)
   };
 
   const chainChanged = () => {
     setErrorMessage(null);
     setAccount(null);
     setBalance(null);
+    // setWallet(null);
   };
 
   return (

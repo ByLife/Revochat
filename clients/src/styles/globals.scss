@@ -1,18 +1,7 @@
-// @tailwind base;
-// @tailwind components;
-// @tailwind utilities;
-
-
-
-// @import './home.scss';
-// @import './footer.scss';
-// @import './navbar.scss';
-// @import './sidebar.scss';
-
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
-$dark: #242424;
+$dark: #252525;
 $light: rgba(255, 255, 255, 0.87);
 
 
@@ -24,7 +13,7 @@ body{
 
 body.dark{  
     background-color:$dark;
-    color: white;
+    // color: white;
 
     .switch{
         background-color: $light;
@@ -33,7 +22,9 @@ body.dark{
     nav{
         -webkit-backdrop-filter: saturate(50%) blur(8px);
         backdrop-filter: saturate(50%) blur(8px);
-        background: rgba(36,36,36,.7)
+        background: rgba(36,36,36,.7);
+        color: $light;
+
     }
 
     
