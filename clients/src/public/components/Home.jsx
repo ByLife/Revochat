@@ -13,7 +13,7 @@ export default function home() {
 
   const WalletLogin = () => {
     console.log('log to wallet')
-    setAuth(true)
+    // setAuth(true)
     
   }
   return (
