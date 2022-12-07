@@ -4,6 +4,7 @@ import ChatPage from '../public/components/ChatPage'
 import NavBar from '../public/components/NavBar';
 import FriendsList from '../public/components/FriendsList';
 import Wallet from '../public/components/Wallet';
+import ChatsList from '../public/components/ChatsList';
 
 
 const AppPage = () => {
@@ -13,6 +14,7 @@ const AppPage = () => {
                 <SideBar/>
             </div>
            <div className=' ml-16 absolute left-2 h-full w-56'>
+            <ChatsList/>
             <span className='absolute bottom-2 py-1 border rounded-full border-purple-500 flex max-w-full'>
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"

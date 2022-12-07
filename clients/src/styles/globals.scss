@@ -9,12 +9,20 @@ body{
     background-color: $light;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+
+    .css-1yocq7i-MuiPaper-root {
+        background-color: $light !important;
+        color: purple;
+    }
 }
 
-body.dark{  
+body.dark{
     background-color:$dark;
     // color: white;
 
+    .css-1yocq7i-MuiPaper-root {
+        background-color: $dark !important;
+    }
     .switch{
         background-color: $light;
     }
@@ -25,6 +33,10 @@ body.dark{
         background: rgba(36,36,36,.7);  
         color: $light;
 
+    }
+
+    article{
+        color: $light;
     }
 
     
