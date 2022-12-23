@@ -1,10 +1,12 @@
 import React from 'react';
 import SideBar from '../public/components/SideBar'
-import ChatPage from '../public/components/ChatPage'
+import ChatPage from './ChatPage'
 import NavBar from '../public/components/NavBar';
 import FriendsList from '../public/components/FriendsList';
 import Wallet from '../public/components/Wallet';
 import ChatsList from '../public/components/ChatsList';
+import { Divider } from '@mui/material'
+
 
 
 const AppPage = () => {
@@ -13,8 +15,11 @@ const AppPage = () => {
            <div >
                 <SideBar/>
             </div>
-           <div className=' ml-16 absolute left-2 h-full w-56'>
+
+           <div className='bg-neutral-700 ml-16 absolute left-2 h-full w-56'>
             <ChatsList/>
+            {/* <Divider orientation='vertical' /> */}
+
             <span className='absolute bottom-2 py-1 border rounded-full border-purple-500 flex max-w-full'>
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -27,7 +32,7 @@ const AppPage = () => {
              <Wallet />
             </span>
            </div> 
-           <div className='bg-neutral-700 absolute ml-72 left-2 h-full overflow-hidden' style={{width: '82.6%'}}>
+           <div className='bg-neutral-700  ml-72 left-2 h-full overflow-hidden w-' >
                 <FriendsList />
             </div> 
            {/* <ChatPage/> */}

@@ -10,13 +10,13 @@ export default function ChatsList() {
         setDM(USERS)
     }, []);
   return (
-    <div>
+    <div className='pt-4'>
         <h4 className='py-2'>
         Direct Messages
         </h4>
         <Divider/>
 
-        <div className='pt-2'>
+        <div className='pt-2 pl-2 '>
             {DM ? DM.map(dm =>(
                 <div>
                     <div className='flex justify-start my-2'>

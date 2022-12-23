@@ -9,7 +9,7 @@ import MetaConnect from '../../pages/hooks/MetaConnect';
 
 export default function home() {
   
-  const [Auth, setAuth] = useContext(Context);
+  // const [Auth, setAuth] = useContext(Context);
 
   const WalletLogin = () => {
     console.log('log to wallet')

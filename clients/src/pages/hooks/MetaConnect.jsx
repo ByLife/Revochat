@@ -5,8 +5,9 @@ import { Context } from '../../pages/Context';
 
 const MetaConnect = () => {
 
-  const [Auth, setAuth] = useContext(Context);
-  const [wallet, setWallet] = useContext(Context);
+  // const [Auth, setAuth] = useContext(Context);
+
+  // const [wallet, setWallet] = useContext(Context);
 
   const [errorMessage, setErrorMessage] = useState(null);
   const [account, setAccount] = useState(null);
@@ -47,15 +48,13 @@ const MetaConnect = () => {
       console.error(err);
       setErrorMessage("There was a problem connecting to MetaMask");
     }
-    setWallet(account)
-    console.log(wallet)
+    // setWallet(account)
   };
 
   const chainChanged = () => {
     setErrorMessage(null);
     setAccount(null);
     setBalance(null);
-    // setWallet(null);
   };
 
   return (
