@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import { useContext } from 'react';
-import { Context } from '../../pages/Context';
 import IconButton from '@mui/material/IconButton';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
@@ -31,7 +29,7 @@ const SideBar = () => {
         // setAuth(false);
     }
     return (
-        <div className="sidebar">
+        <div className="sidebar bg-cyan-900">
             <div >
                 <ServerList/>
             </div>

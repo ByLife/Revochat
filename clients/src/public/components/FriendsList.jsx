@@ -8,7 +8,6 @@ import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Diversity1Icon from '@mui/icons-material/Diversity1';
 import FriendsListRow from './FriendsListRow';
-import { Context } from '../../pages/Context';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',

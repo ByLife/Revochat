@@ -50,12 +50,13 @@ export default function ServerList() {
         
     ]
   return (
-    <div className='hideScroll ' style={{overflowY: 'auto', height: '560px'}} >
+    <div className='hideScroll' style={{overflowY: 'auto', height: '560px'}} >
         {servers && servers.map((server) =>(
             <div className='p-1' style={{height: '70px'}}>
                 
-                <img className='rounded-full object-cover h-full w-full cursor-pointer hover:object-none'
-                src={server.image} 
+                <img className='rounded-full object-cover h-full w-full px-1 py-1 cursor-pointer hover:scale-125 '
+                src={server.image}
+                
                 alt={server.name}
                     
                 />

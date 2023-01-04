@@ -6,21 +6,22 @@ import FriendsList from '../public/components/FriendsList';
 import Wallet from '../public/components/Wallet';
 import ChatsList from '../public/components/ChatsList';
 import { Divider } from '@mui/material'
+import Messages from '../public/components/Messages';
 
 
 
 const AppPage = () => {
     return (
-        <div className='w-full'>
+        <div className='flex-wrap '>
            <div >
                 <SideBar/>
             </div>
 
-           <div className='bg-neutral-700 ml-16 absolute left-2 h-full w-56'>
+           <div className='bg-cyan-700 ml-14 absolute pl-2 h-full w-60'>
             <ChatsList/>
             {/* <Divider orientation='vertical' /> */}
 
-            <span className='absolute bottom-2 py-1 border rounded-full border-purple-500 flex max-w-full'>
+            <span className='absolute bottom-2 ml-6 py-1 border rounded-full border-purple-500 flex max-w-full'>
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                         width="30" height="30"
@@ -29,11 +30,13 @@ const AppPage = () => {
                     </svg>
                 </span>
             
-             <Wallet />
+            <Wallet />
             </span>
            </div> 
-           <div className='bg-neutral-700  ml-72 left-2 h-full overflow-hidden w-' >
-                <FriendsList />
+           <div className='bg-cyan-600 ml-72 left-2 absolute  h-full ' style={{width: '80%'}} >
+                {/* <FriendsList /> */}
+                <Messages/>
+
             </div> 
            {/* <ChatPage/> */}
         </div>

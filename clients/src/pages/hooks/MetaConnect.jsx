@@ -1,11 +1,11 @@
 import { Button, Paper, Stack, Typography } from "@mui/material";
 import { ethers } from "ethers";
 import React, { useContext, useEffect, useState } from "react";
-import { Context } from '../../pages/Context';
+import { RevochatContext } from '../../public/context/context'
 
 const MetaConnect = () => {
 
-  // const [Auth, setAuth] = useContext(Context);
+  const {currentUser, wallet} = useContext(RevochatContext);
 
   // const [wallet, setWallet] = useContext(Context);
 
@@ -64,7 +64,8 @@ const MetaConnect = () => {
         <Typography variant="h6">
           Balance: {balance} {balance ? "ETH" : null}
         </Typography>
-        <Button onClick={connectHandler}>Connect Account</Button>
+        {/* <Button onClick={connectHandler}>Connect Account</Button> */}
+        <Button href="/chat">Access to Chat</Button>
         {errorMessage ? (
           <Typography variant="body1" color="red">
             Error: {errorMessage}
